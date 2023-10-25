@@ -31,9 +31,6 @@ export async function get({
       body: tokenParams,
     });
 
-    if (tokenInfo.statusCode !== 200) {
-      throw new Error(`Token request failed with status code: ${tokenInfo.statusCode}`);
-    }
 
     const token = await tokenInfo.body?.json();
     return token;

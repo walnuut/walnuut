@@ -8,9 +8,6 @@ export async function get(access_token: string) {
       },
     });
 
-    if (userInfo.statusCode !== 200) {
-      throw new Error(`User info request failed with status code: ${userInfo.statusCode}`);
-    }
 
     const user = await userInfo.body?.json();
     return user;
