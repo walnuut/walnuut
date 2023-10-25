@@ -9,7 +9,7 @@ export async function get(access_token: string) {
     });
 
 
-    const user = await userInfo.body?.json();
+    const user = await userInfo.json();
     return user;
   } catch (error) {
     console.error('Error while fetching user:', error);

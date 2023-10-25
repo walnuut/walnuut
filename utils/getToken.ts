@@ -32,7 +32,7 @@ export async function get({
     });
 
 
-    const token = await tokenInfo.body?.json();
+    const token = await tokenInfo.json();
     return token;
   } catch (error) {
     console.error('Error while fetching token:', error);
